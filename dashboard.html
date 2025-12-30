@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard | AI Career Studio</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<nav>
+  <h1>AI Career Studio</h1>
+  <ul>
+    <li><a href="index.html" >Home</a></li>
+    <li><a href="dashboard.html" class="active">Dashboard</a></li>
+    <li><a href="audit.html" >Profile Audit</a></li>
+    <li><a href="salary.html">Salary</a></li>
+    <li><a href="interview.html">Interview</a></li>
+    <li><a href="tools.html" >Resume Tools</a></li>
+</nav>
+
+<main class="container">
+
+  <h2>Career Dashboard</h2>
+
+  <section class="grid">
+
+    <div class="card">
+      <h3>Resume Audit</h3>
+      <p id="auditStatus">Not run yet</p>
+      <a href="audit.html">Run Audit →</a>
+    </div>
+
+    <div class="card">
+      <h3>Salary Estimate</h3>
+      <p id="salaryStatus">Not calculated</p>
+      <a href="salary.html">Estimate Salary →</a>
+    </div>
+
+    <div class="card">
+      <h3>Interview Practice</h3>
+      <p id="interviewStatus">0 sessions completed</p>
+      <a href="interview.html">Practice Now →</a>
+    </div>
+
+  </section>
+
+</main>
+
+<script src="./js/dashboard.js"></script>
+<script src="./js/common.js"></script>
+
+</body>
+</html>

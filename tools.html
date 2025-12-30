@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume Tools | AI Career Studio</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+</head>
+
+<body>
+
+<!-- ================= NAV ================= -->
+<nav>
+  <h1 class="logo">
+    <span class="logo-mark">◉</span> AI Career Studio
+  </h1>
+
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li><a href="audit.html">Profile Audit</a></li>
+    <li><a href="salary.html">Salary</a></li>
+    <li><a href="interview.html">Interview</a></li>
+    <li><a href="tools.html" class="active">Resume Tools</a></li>
+  </ul>
+</nav>
+
+<!-- ================= MAIN ================= -->
+<main class="container">
+
+  <!-- Page Header -->
+  <header class="hero-section">
+    <h2>Resume Power Tools</h2>
+    <p>
+      Optimize your resume using AI-driven language enhancement,
+      keyword detection, and measurable impact analysis.
+    </p>
+  </header>
+
+  <!-- ================= ACTION VERB REWRITER ================= -->
+  <section class="card">
+    <h3>✍️ Action Verb Rewriter</h3>
+    <p class="meta">
+      Transform weak or passive bullet points into strong,
+      recruiter-ready statements.
+    </p>
+
+    <label for="bulletInput">Resume Bullet</label>
+    <textarea
+      id="bulletInput"
+      placeholder="e.g. Responsible for managing a sales team"
+    ></textarea>
+
+    <div class="row">
+      <button id="rewriteBtn">Rewrite Bullet</button>
+      <button id="clearRewriteBtn" class="secondary">Clear</button>
+    </div>
+
+    <div id="rewriteOutput" class="result-block hidden"></div>
+  </section>
+
+  <!-- ================= KEYWORD ANALYZER ================= -->
+  <section class="card">
+    <h3>🔍 Keyword & Metrics Analyzer</h3>
+    <p class="meta">
+      Identify technical skills, quantified achievements,
+      and overall resume quality.
+    </p>
+
+    <label for="resumeText">Resume Content</label>
+    <textarea
+      id="resumeText"
+      placeholder="Paste your full resume text here"
+    ></textarea>
+
+    <div class="row">
+      <button id="analyzeBtn">Analyze Resume</button>
+      <button id="resetBtn" class="secondary">Reset</button>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats">
+      <span id="skillStat">Skills: 0</span>
+      <span id="metricStat">Metrics: 0</span>
+      <span id="scoreStat">Quality Score: —</span>
+    </div>
+
+    <!-- Output -->
+    <div id="analysisOutput" class="analysis result-block hidden"></div>
+  </section>
+
+</main>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="./js/common.js"></script>
+<script src="./js/tools.js"></script>
+
+</body>
+</html>

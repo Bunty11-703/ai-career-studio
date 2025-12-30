@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interview Pro | AI Career Studio</title>
+
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= NAV ================= -->
+<nav>
+  <h1 class="logo">
+    <span class="logo-mark">◉</span> AI Career Studio
+  </h1>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li><a href="audit.html">Profile Audit</a></li>
+    <li><a href="salary.html">Salary</a></li>
+    <li><a href="interview.html" class="active">Interview</a></li>
+    <li><a href="tools.html">Resume Tools</a></li>
+  </ul>
+</nav>
+
+<!-- ================= MAIN ================= -->
+<main class="container">
+
+  <!-- INTERVIEW PRACTICE -->
+  <section class="card">
+    <h2>Interview Pro</h2>
+    <p>
+      Practice realistic behavioral interview questions using the
+      <strong>STAR method</strong>.  
+      Questions are generated dynamically and won’t repeat.
+    </p>
+
+    <!-- Generate -->
+    <button id="questionBtn">Generate Interview Question</button>
+
+    <!-- Question -->
+    <div id="questionBox" class="question-box hidden"></div>
+
+    <!-- Confidence -->
+    <label>Your Answer (STAR format)</label>
+    <div class="confidence-bar">
+      <div id="confidenceFill"></div>
+    </div>
+
+    <label>Role</label>
+<select id="roleSelect">
+  <option value="data">Data</option>
+  <option value="ml">Machine Learning</option>
+  <option value="devops">DevOps</option>
+  <option value="swe">Software Engineering</option>
+</select>
+
+<label>Difficulty</label>
+<select id="levelSelect">
+  <option value="junior">Junior</option>
+  <option value="mid">Mid</option>
+  <option value="senior">Senior</option>
+</select>
+
+
+    <!-- Answer -->
+    <textarea
+      id="answerInput"
+      placeholder="Situation → Task → Action → Result"
+    ></textarea>
+
+    <!-- Feedback -->
+    <button id="feedbackBtn" disabled>Get Feedback</button>
+
+    <div id="feedbackBox" class="hidden"></div>
+  </section>
+
+  <!-- HISTORY -->
+  <section class="card">
+    <h3>Practice History</h3>
+    <p class="meta">Your last 5 attempts are saved locally.</p>
+
+    <button id="exportBtn" class="secondary">
+      Export Interview Report
+    </button>
+
+    <div id="historyList">
+      <p class="hint">No attempts yet.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="./js/interview.js"></script>
+<script src="./js/common.js"></script>
+</body>
+</html>

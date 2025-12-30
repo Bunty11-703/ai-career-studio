@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile Audit | AI Career Studio</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+
+<nav>
+  <h1>AI Career Studio</h1>
+  <ul>
+    <li><a href="index.html" >Home</a></li>
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li><a href="audit.html" class="active">Profile Audit</a></li>
+    <li><a href="salary.html">Salary</a></li>
+    <li><a href="interview.html">Interview</a></li>
+    <li><a href="tools.html">Resume Tools</a></li>
+  </ul>
+</nav>
+
+<main class="container">
+
+  <section class="card">
+    <h2>Profile Audit</h2>
+    <p>Compare your resume against a target job description.</p>
+
+    <label>Upload Resume</label>
+    <input type="file" id="resumeFile" accept=".pdf,.doc,.docx">
+
+    <label>Job Description</label>
+    <textarea id="jdInput" placeholder="Paste job description here"></textarea>
+
+    <button id="auditBtn">Run Audit</button>
+
+    <p id="loadingText" class="hidden">Analyzing resume…</p>
+    <p id="errorText" class="error hidden"></p>
+
+    <div id="results" class="hidden"></div>
+  </section>
+</main>
+<script src="./js/common.js"></script>
+<script src="./js/audit.js"></script>
+</body>
+</html>
